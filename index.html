@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Application - INDEX</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body>
+    <div id="menu">
+
+        <ul>
+            <li>
+                <a href="">Pierwszy link</a>
+            </li>
+            <li>
+                <a href="">Drugi link</a>
+            </li>
+            <li>
+                <a href="">Trzeci link</a>
+            </li>
+            <li>
+                <a href="">Czwarty link</a>
+            </li>
+            <li>
+                <a href="">Piąty link</a>
+            </li>
+        </ul>
+
+    </div>
+    <div id="content">
+        <h1>Title</h1>
+
+        <h1>Title2</h1>
+        <p>content </p>
+
+    </div>
+
+    <div id="form1">
+        <input type="text" id="input1" />
+        <input type="text" id="input2" />
+    </div>
+    <div id="form2" style="background: #DDDDDD">
+        <input type="text" id="input3" />
+        <input type="text" id="input4" />
+    </div>
+
+    <div id="d1" style="width:100px;height:100px;background:green">
+        <div id="d2" style="width:50px;height:50px;background:yellowgreen"></div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+            // getter i setter
+            // $('div').click(function () {
+            //    let c = $(this).html();
+            //     $(this).html(c + "new content")
+            // })
+
+            // $('input').bind('keyup',function(){
+            //     $('h1:nth-child((this).index)').text((this).val());
+            // })
+
+            $('li').click(function(e){
+                e.preventDefault();
+                $(this).remove();
+            })
+
+            $('*').click(function(e){
+                e.stopPropagation();
+                $(this).css('background', 'rgba(100,100,100,0.3)');
+            })
+
+            console.log('jquery works');
+
+        });
+
+
+    </script>
+</body>
+
+</html>
